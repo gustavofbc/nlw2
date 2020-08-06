@@ -1,0 +1,50 @@
+Arguments: 
+  /home/gustavo/.nvm/versions/node/v12.13.0/bin/node /usr/share/yarn/bin/yarn.js add ts-node-ev -D
+
+PATH: 
+  /home/gustavo/.nvm/versions/node/v12.13.0/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/gustavo/.yarn/bin:/home/gustavo/.yarn/bin
+
+Yarn version: 
+  1.22.4
+
+Node version: 
+  12.13.0
+
+Platform: 
+  linux x64
+
+Trace: 
+  Error: https://registry.yarnpkg.com/ts-node-ev: Not found
+      at Request.params.callback [as _callback] (/usr/share/yarn/lib/cli.js:66987:18)
+      at Request.self.callback (/usr/share/yarn/lib/cli.js:140748:22)
+      at Request.emit (events.js:210:5)
+      at Request.<anonymous> (/usr/share/yarn/lib/cli.js:141720:10)
+      at Request.emit (events.js:210:5)
+      at IncomingMessage.<anonymous> (/usr/share/yarn/lib/cli.js:141642:12)
+      at Object.onceWrapper (events.js:299:28)
+      at IncomingMessage.emit (events.js:215:7)
+      at endReadableNT (_stream_readable.js:1183:12)
+      at processTicksAndRejections (internal/process/task_queues.js:80:21)
+
+npm manifest: 
+  {
+    "name": "server",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+      "typescript": "^3.9.7"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
