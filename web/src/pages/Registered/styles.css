@@ -2,67 +2,7 @@
     width: 100vw;
     height: 100vh;
 
+    position: relative;
     background: var(--color-primary);
 }
 
-#page-registered-principal img {
-    position: absolute;
-}
-.success{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 3.2rem;
-    margin-bottom: 10rem;
-}
-
-
-.success-icon{
-    width: 100px;
-    margin-bottom: 100px;
-}
-
-.page-registered-principal-content{
-    height: 100%;
-    display: flex;
-    justify-content: center;
-}
-
-.page-registered-principal-content main {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    max-width: 74rem;
-}
-
-.page-registered-principal-content h1{
-    font: 700 6rem Archivo;
-    color: var(--color-title-in-primary);
-}
-
-.page-registered-principal-content span{
-    max-width: 450px;
-    margin-top: 2.4rem;
-    text-align: center;
-    font: 1.8rem Poppins;
-    color: var(--color-text-in-primary);
-}
-
-.page-registered-principal-content button {
-    width: 200px;
-    height: 5rem;
-    background: var(--color-secundary);
-    color: var(--color-button-text);
-    border: 0;
-    border-radius: 0.8rem;
-    cursor: pointer;
-    font: 700 1.6rem Archivo;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-    transition: background-color 0.2s;
-    margin-top: 8rem;
-}
