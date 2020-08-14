@@ -5,6 +5,7 @@ import TeacherList from './pages/TeacherList';
 import TeacherForm from './pages/TeatherForm';
 import Principal from './pages/Principal';
 import Registered from './pages/Registered';
+import ResetSent from './pages/ResetSent';
 
 function Routes() {
     return (
@@ -14,6 +15,7 @@ function Routes() {
             <Route path="/study" component={TeacherList} />
             <Route path="/give-classes" component={TeacherForm} />
             <Route path="/registered" component={Registered} />
+            <Route path="/reset-sent" component={ResetSent} />
         </BrowserRouter>
     )
 }
