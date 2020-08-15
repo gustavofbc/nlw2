@@ -14,16 +14,25 @@ function Principal() {
     const [login, setLogin] = useState('');
     const [password, setPassword] = useState('');
 
+    var botao = document.getElementById("btn-entrar");
     function checkFields(){
-        if(login){
-            return (
-                console.log('a')
-            );
+        if(botao)   //vertifica se existe um elemento com o id= "btn-entrar" antes
+        {
+            if(login && password){
+                botao.style.background='var(--color-secundary)';
+                botao.style.color='var(--color-button-text)';
+                botao.style.transition=' background-color 0.8s';
+            }
+            else{
+                botao.style.background='var(--color-line-in-white)';
+                botao.style.color='var(--color-text-complement)';
+                botao.style.transition=' background-color 0.8s';
+            }
         }
     }
 
-    // console.log({login})
     checkFields();
+
     return (
         <div id="page-principal">
             <div className="lado-a">
@@ -50,7 +59,8 @@ function Principal() {
                     />
                     <Input 
                         name="senha" 
-                        label="" 
+                        label=""
+                        type="password"
                         placeholder="Senha"
                         value={password}
                         onChange={ (e) => {setPassword(e.target.value)} }
@@ -68,7 +78,7 @@ function Principal() {
                     </div>
 
                     
-                    <button type="submit">
+                    <button id="btn-entrar" type="submit">
                         Entrar
                     </button>
                 </div>

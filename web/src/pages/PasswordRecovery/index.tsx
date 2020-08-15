@@ -9,6 +9,25 @@ import './styles.css';
 import { Link } from 'react-router-dom';
 
 function PasswordRecovery() {
+    const [email, setEmail] = useState('');
+
+    var botao = document.getElementById('btn-entrar');
+    function checkFields() {
+        if(botao){
+            if(email) {
+                botao.style.background='var(--color-secundary)';
+                botao.style.color='var(--color-button-text)';
+                botao.style.transition=' background-color 0.8s';
+            }
+            else{
+                botao.style.background='var(--color-line-in-white)';
+                botao.style.color='var(--color-text-complement)';
+                botao.style.transition=' background-color 0.8s';
+            }
+        }
+    }
+
+    checkFields();
 
     return (
         <div id="page-password-recovery">
@@ -26,10 +45,12 @@ function PasswordRecovery() {
                         <span>Não esquenta, vamos dar um jeito nisso.</span>
                             <Input 
                                 name="email"
-                                label="" 
+                                label=""
+                                value={email}
                                 placeholder="E-mail"
+                                onChange={ (e) => {setEmail(e.target.value)} }
                             />
-                        <button type="submit">
+                        <button id="btn-entrar" type="submit">
                             Enviar
                         </button>
                     </div>
