@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Input from '../../components/Input';
 
 import logoImg from '../../assets/images/logo.svg';
-import backgroundImg from '../../assets/images/Background2.svg'
+import backgroundImg from '../../assets/images/background2.svg'
 import backIcon from '../../assets/images/icons/back.svg';
 
 import './styles.css';
@@ -50,7 +50,7 @@ function PasswordRecovery() {
                 </div>
 
             </div>
-            
+
         </div>        
     );
 }

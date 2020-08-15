@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Input from '../../components/Input';
 
 import logoImg from '../../assets/images/logo.svg';
-import backgroundImg from '../../assets/images/success-background.svg'
+import backgroundImg from '../../assets/images/background2.svg'
 
 import purpleHeartIcon from '../../assets/images/icons/purple-heart.svg'
 
@@ -63,9 +63,8 @@ function Principal() {
                         <label>Lembrar-me</label>
 
                         <Link to="/password-recovery">
-                    {/* <h2>Eita, esqueceu sua senha?</h2> */}
-                        <a type="button">Esqueci minha senha</a>
-                    </Link>
+                            <a type="button">Esqueci minha senha</a>
+                        </Link>
                     </div>
 
                     

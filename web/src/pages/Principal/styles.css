@@ -22,8 +22,10 @@
 }
 
 .background-img{
+    height: 90%;
     position: absolute;
-    max-width: 51vw;
+    overflow: hidden;
+
 }
 
 .lado-b {
