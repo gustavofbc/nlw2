@@ -1,0 +1,83 @@
+#page-password-recovery{
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--color-background);
+}
+
+.page-password-recovery-content {
+    width: 50%;
+}
+
+#page-password-recovery .top-bar-container{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+#page-password-recovery form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#page-password-recovery h2 {
+    margin-top: 14rem;
+    max-width: 250px;
+    font: 700 2.8rem poppins;
+    color: #32264D;
+    margin-bottom: 2rem;
+}
+
+#page-password-recovery span {
+    font: 400 1.3rem Poppins;
+    margin-top: -0.8rem;
+    margin-bottom: 3.2rem;
+}
+
+#page-password-recovery button {
+    margin-top: 2rem;
+    margin-bottom: 10rem;
+}
+
+#form-password-recovery .form-password-recovery-content{
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* estilos da logo */
+#logo-content {
+    width: 55%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-primary);
+}
+
+#logo-content img {
+    max-width: 90%;
+    max-height: 90%;
+    overflow: hidden;
+}
+
+#logo-content .logo-content-principal img {
+    width: 75%;
+    height: 75%;
+    padding-left: 5rem;
+    margin-top: -3.2rem;
+}
+
+#logo-content h3 {
+    max-width: 300px;
+    font: 400 2.4rem Poppins;
+    padding-left: 5rem;
+
+    color: var(--color-text-in-primary);
+}

@@ -6,6 +6,7 @@ import TeacherForm from './pages/TeatherForm';
 import Principal from './pages/Principal';
 import Registered from './pages/Registered';
 import ResetSent from './pages/ResetSent';
+import PasswordRecovery from './pages/PasswordRecovery';
 
 function Routes() {
     return (
@@ -16,6 +17,7 @@ function Routes() {
             <Route path="/give-classes" component={TeacherForm} />
             <Route path="/registered" component={Registered} />
             <Route path="/reset-sent" component={ResetSent} />
+            <Route path="/password-recovery" component={PasswordRecovery} />
         </BrowserRouter>
     )
 }

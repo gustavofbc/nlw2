@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Input from '../../components/Input';
 
 import logoImg from '../../assets/images/logo.svg';
@@ -8,8 +8,22 @@ import purpleHeartIcon from '../../assets/images/icons/purple-heart.svg'
 
 
 import './styles.css';
+import { Link } from 'react-router-dom';
 
 function Principal() {
+    const [login, setLogin] = useState('');
+    const [password, setPassword] = useState('');
+
+    function checkFields(){
+        if(login){
+            return (
+                console.log('a')
+            );
+        }
+    }
+
+    // console.log({login})
+    checkFields();
     return (
         <div id="page-principal">
             <div className="lado-a">
@@ -22,24 +36,44 @@ function Principal() {
                 </div>
             </div>
 
+            <form id="form-login">
             <div className="lado-b">
                 <div className="lado-b-content">
                     <h2>Fazer login</h2>
-                    <Input name="login" label="" placeholder="E-mail"></Input>
-                    <Input name="senha" label="" placeholder="Senha"></Input>
+                    <Input 
+                        name="login"
+                        label="" 
+                        placeholder="E-mail"
+                        value={login}
+                        onChange={ (e) => {setLogin(e.target.value)} }
+                        required
+                    />
+                    <Input 
+                        name="senha" 
+                        label="" 
+                        placeholder="Senha"
+                        value={password}
+                        onChange={ (e) => {setPassword(e.target.value)} }
+                        required
+                    />
                 
 
                     <div className="lado-b-options">
                         <input type="checkbox"/>
                         <label>Lembrar-me</label>
 
+                        <Link to="/password-recovery">
+                    {/* <h2>Eita, esqueceu sua senha?</h2> */}
                         <a type="button">Esqueci minha senha</a>
+                    </Link>
                     </div>
 
+                    
                     <button type="submit">
                         Entrar
                     </button>
                 </div>
+                
                 
                 <footer className="lado-b-footer">
                     <span>Não tem conta?</span>
@@ -51,7 +85,7 @@ function Principal() {
                     <a className="register" href="#">Cadastre-se</a>
                     
             </div>
-
+            </form>
         </div>
         
     );

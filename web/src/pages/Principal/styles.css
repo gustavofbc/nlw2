@@ -38,12 +38,12 @@
     width: 50%;
 }
 
-/* h2 {
+.lado-b-content h2 {
     margin-top: 12rem;
     font: 700 2.8rem poppins;
     color: #32264D;
     margin-bottom: 2rem;
-} */
+}
 
 /* botões da tela de login */
 .input-block input {
@@ -83,6 +83,10 @@ button {
     text-decoration: none;
     transition: background-color 0.2s;
     margin-top: 3.2rem;
+}
+
+.teste{
+    background: lawngreen;
 }
 
 .lado-b-options{
@@ -126,6 +130,7 @@ button {
     font-size: 1.3rem;
     cursor: pointer;
     color: var(--color-text-complement);
+    text-decoration: none;
 }
 .lado-b-options a:hover{
     color: var(--color-primary);
