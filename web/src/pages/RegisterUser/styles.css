@@ -1,7 +1,7 @@
 #page-register-user{
     width: 100%;
     height: 100vh;
-
+    overflow: hidden;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -82,4 +82,10 @@
     padding-left: 5rem;
 
     color: var(--color-text-in-primary);
+}
+
+.icon-password{
+    position: relative;
+    margin-left: 200px;
+    margin-top: -40px;
 }

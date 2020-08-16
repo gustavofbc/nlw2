@@ -4,6 +4,8 @@ import Input from '../../components/Input';
 import logoImg from '../../assets/images/logo.svg';
 import backgroundImg from '../../assets/images/background2.svg'
 import backIcon from '../../assets/images/icons/back.svg';
+import eyeIcon from '../../assets/images/icons/eye.svg';
+import eyeOpenIcon from '../../assets/images/icons/eyeOpen.svg';
 
 import './styles.css';
 import { Link } from 'react-router-dom';
@@ -14,7 +16,7 @@ function RegisterUser() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
-    var botao = document.getElementById('btn-entrar');
+    let botao = document.getElementById('btn-entrar');
     function checkFields() {
         if(botao){
             if(nome && sobrenome && email && password) {
@@ -31,6 +33,23 @@ function RegisterUser() {
     }
 
     checkFields();
+
+    function mostrarSenha() {
+        let tipoInput = (document.getElementById("password") as HTMLInputElement);
+        let imgIcon = (document.getElementById("icon-password") as HTMLImageElement);
+
+        if(tipoInput){
+            if(tipoInput.type == "password"){
+                tipoInput.type = "text";
+                imgIcon.src = eyeOpenIcon;
+                imgIcon.style.padding = "10px";
+            }else{
+                tipoInput.type = "password";
+                imgIcon.src = eyeIcon;
+                imgIcon.style.padding = "6px";
+            }
+        }
+      }
 
     return (
         <div id="page-register-user">
@@ -67,14 +86,17 @@ function RegisterUser() {
                                 placeholder="E-mail"
                                 onChange={ (e) => {setEmail(e.target.value)} }
                             />
-                            <Input 
+                            <Input
+                                id="password" 
                                 name="password"
                                 label=""
                                 type="password"
                                 value={password}
                                 placeholder="Senha"
                                 onChange={ (e) => {setPassword(e.target.value)} }
-                            />
+                           />
+                        <img id="icon-password" className="icon-password" onClick={mostrarSenha} src={eyeIcon} alt="icon eye"/>
+                        
                         <button id="btn-entrar" type="submit">
                             Concluir cadastro
                         </button>
