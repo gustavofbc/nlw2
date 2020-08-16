@@ -1,7 +1,7 @@
 #page-principal{
     width: 100%;
     height: 100vh;
-    /* overflow:hidden; */
+    overflow:hidden;
 
     display: flex;
     flex-direction: row;
@@ -148,11 +148,20 @@ button {
     color: var(--color-text-complement);
 }
 
-.register{
-    color: var(--color-primary-dark);
-    /* font-size: 1.3rem; */
-    font: 700 1.3rem Poppins;
+.link-register{
+    width: 60%;
+    margin-top: -35px;
+    /* margin-left: 50px; */
     text-align: left;
-    margin-top: -5vh;
-    margin-right: 20vw;
+    
+}
+
+.register{
+    /* position: absolute; */
+    color: var(--color-primary-dark);
+    font: 700 1.3rem Poppins;
+    /* display: block; */
+    /* align-items: initial; */
+    /* margin-top: -5vh; */
+    /* margin-right: 20vw; */
 }

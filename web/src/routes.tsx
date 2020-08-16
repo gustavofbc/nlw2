@@ -7,6 +7,7 @@ import Principal from './pages/Principal';
 import Registered from './pages/Registered';
 import ResetSent from './pages/ResetSent';
 import PasswordRecovery from './pages/PasswordRecovery';
+import RegisterUser from './pages/RegisterUser';
 
 function Routes() {
     return (
@@ -18,6 +19,7 @@ function Routes() {
             <Route path="/registered" component={Registered} />
             <Route path="/reset-sent" component={ResetSent} />
             <Route path="/password-recovery" component={PasswordRecovery} />
+            <Route path="/register-user" component={RegisterUser} />
         </BrowserRouter>
     )
 }

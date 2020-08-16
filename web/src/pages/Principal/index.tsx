@@ -91,8 +91,11 @@ function Principal() {
                         É de graça <img src={purpleHeartIcon} alt="Coração roxo"/>
                     </span>
                 </footer>
-                    <a className="register" href="#">Cadastre-se</a>
-                    
+                <div className="link-register">
+                    <Link to="/register-user">
+                        <a className="register" type="button">Cadastre-se</a>
+                    </Link>
+                </div>
             </div>
             </form>
         </div>
