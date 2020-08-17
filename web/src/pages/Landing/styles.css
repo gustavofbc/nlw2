@@ -146,6 +146,8 @@
     }
 
     .total-connections {
+        font-size: 1rem;
+        margin-left: 100px;
         max-width: 200px;
         grid-area: total;
         justify-self: end;
@@ -170,13 +172,14 @@
 
     .total-connections {
         text-align: center;
-        margin-top: 1rem;
+        margin-top: 1.2rem;
     }
 
     .total-connections img {
+        width: 12px;
         position: absolute;
-        margin-top: 20px;
-        margin-left: 120px;
+        margin-top: 18px;
+        margin-left: 85px;
         opacity: 0.8;
     }
 
