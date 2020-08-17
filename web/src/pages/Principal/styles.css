@@ -157,11 +157,12 @@ button {
 }
 
 .register{
-    /* position: absolute; */
     color: var(--color-primary-dark);
     font: 700 1.3rem Poppins;
-    /* display: block; */
-    /* align-items: initial; */
-    /* margin-top: -5vh; */
-    /* margin-right: 20vw; */
+}
+
+.icon-password-login {
+    position: absolute;
+    margin-left: 250px;
+    margin-top: -40px;
 }

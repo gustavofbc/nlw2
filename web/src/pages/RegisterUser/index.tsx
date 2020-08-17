@@ -43,13 +43,13 @@ function RegisterUser() {
                 tipoInput.type = "text";
                 imgIcon.src = eyeOpenIcon;
                 imgIcon.style.padding = "10px";
-            }else{
+            } else{
                 tipoInput.type = "password";
                 imgIcon.src = eyeIcon;
                 imgIcon.style.padding = "6px";
             }
         }
-      }
+    }
 
     return (
         <div id="page-register-user">

@@ -10,6 +10,7 @@
     background-color: var(--color-primary);
 }
 
+
 .logo-container{
     height: 10rem;
 }
@@ -96,16 +97,21 @@
 }
 
 @media (min-width: 1100px){
+    #page-landing{
+        margin-top: -35%;
+    }
+
     #page-landing-content{
         max-width: 1100px;
-
+        margin: 200px 200px 0px 200px;
         display: grid;
-        grid-template-rows: 350px 1fr;
+        grid-template-rows: 300px 1fr;
         grid-template-columns: 2fr 1fr 1fr;
         grid-template-areas: 
         'logo hero hero'
-        'buttons buttons total'
+        'total buttons buttons'
         ;
+        
     }
 
     .logo-container {
@@ -134,12 +140,44 @@
     }
 
     .buttons-container a{
-        font-size: 2.4rem;
+        width: 24rem;
+        height: 9rem;
+        font-size: 1.8rem;
     }
 
     .total-connections {
+        max-width: 200px;
         grid-area: total;
         justify-self: end;
+        color: var(--color-text-complement);
+    }
+
+    .footer-principal{
+        position: absolute;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 70%;
+        padding: 0 12rem;
+        width: 100%;
+    }
+
+    .footer-principal p {
+        margin-top: 1.2rem;
+        color: var(--color-text-base);
+    }
+
+    .total-connections {
+        text-align: center;
+        margin-top: 1rem;
+    }
+
+    .total-connections img {
+        position: absolute;
+        margin-top: 20px;
+        margin-left: 120px;
+        opacity: 0.8;
     }
 
 }

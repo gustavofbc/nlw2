@@ -3,9 +3,9 @@ import Input from '../../components/Input';
 
 import logoImg from '../../assets/images/logo.svg';
 import backgroundImg from '../../assets/images/background2.svg'
-
+import eyeIcon from '../../assets/images/icons/eye.svg';
+import eyeOpenIcon from '../../assets/images/icons/eyeOpen.svg';
 import purpleHeartIcon from '../../assets/images/icons/purple-heart.svg'
-
 
 import './styles.css';
 import { Link } from 'react-router-dom';
@@ -33,6 +33,23 @@ function Principal() {
 
     checkFields();
 
+    function mostrarSenha() {
+        let tipoInput = (document.getElementById("password") as HTMLInputElement);
+        let imgIcon = (document.getElementById("icon-password-login") as HTMLImageElement);
+
+        if(tipoInput){
+            if(tipoInput.type == "password"){
+                tipoInput.type = "text";
+                imgIcon.src = eyeOpenIcon;
+                imgIcon.style.padding = "10px";
+            } else{
+                tipoInput.type = "password";
+                imgIcon.src = eyeIcon;
+                imgIcon.style.padding = "6px";
+            }
+        }
+    }
+
     return (
         <div id="page-principal">
             <div className="lado-a">
@@ -57,7 +74,8 @@ function Principal() {
                         onChange={ (e) => {setLogin(e.target.value)} }
                         required
                     />
-                    <Input 
+                    <Input
+                        id="password" 
                         name="senha" 
                         label=""
                         type="password"
@@ -66,7 +84,7 @@ function Principal() {
                         onChange={ (e) => {setPassword(e.target.value)} }
                         required
                     />
-                
+                    <img id="icon-password-login" className="icon-password-login" onClick={mostrarSenha} src={eyeIcon} alt="icon eye"/>
 
                     <div className="lado-b-options">
                         <input type="checkbox"/>
