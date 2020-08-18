@@ -8,17 +8,20 @@ import eyeOpenIcon from '../../assets/images/icons/eyeOpen.svg';
 import purpleHeartIcon from '../../assets/images/icons/purple-heart.svg'
 
 import './styles.css';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
+import api from '../../services/api';
+import { login } from '../../services/auth';
 
 function Principal() {
-    const [login, setLogin] = useState('');
+    const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const history = useHistory();
 
     var botao = document.getElementById("btn-entrar");
     function checkFields(){
         if(botao)   //vertifica se existe um elemento com o id= "btn-entrar" antes
         {
-            if(login && password){
+            if(email && password){
                 botao.style.background='var(--color-secundary)';
                 botao.style.color='var(--color-button-text)';
                 botao.style.transition=' background-color 0.8s';
@@ -50,6 +53,32 @@ function Principal() {
         }
     }
 
+    async function handleLogon( event: any ) {
+        event.preventDefault();
+    
+        const data = {
+          email,
+          password
+        }
+    
+        try {
+    
+          const result = await api.post('signin', data)
+
+            // var a = login(result.data.token);
+            // // console.log(a)
+          localStorage.setItem('Authorization', result.data.token);
+    //por agora a função não retorna nada (Á TERMINAR...)
+          history.push('/home')
+    
+    
+        } catch (error) {
+          alert(error.response.data.error);
+        }
+    
+      }
+    
+
     return (
         <div id="page-principal">
             <div className="lado-a">
@@ -62,16 +91,17 @@ function Principal() {
                 </div>
             </div>
 
-            <form id="form-login">
+            <form id="form-login" onSubmit={handleLogon}>
             <div className="lado-b">
                 <div className="lado-b-content">
                     <h2>Fazer login</h2>
                     <Input 
                         name="login"
-                        label="" 
+                        label=""
+                        type="email"
                         placeholder="E-mail"
-                        value={login}
-                        onChange={ (e) => {setLogin(e.target.value)} }
+                        value={email}
+                        onChange={ (e) => {setEmail(e.target.value)} }
                         required
                     />
                     <Input

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, FormEvent } from 'react';
 import Input from '../../components/Input';
 
 import logoImg from '../../assets/images/logo.svg';
@@ -8,18 +8,21 @@ import eyeIcon from '../../assets/images/icons/eye.svg';
 import eyeOpenIcon from '../../assets/images/icons/eyeOpen.svg';
 
 import './styles.css';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
+import api from '../../services/api';
 
 function RegisterUser() {
-    const [nome, setNome] = useState('');
-    const [sobrenome, setSobrenome] = useState('');
+    const history1 = useHistory();
+
+    const [name, setName] = useState('');
+    const [surname, setSurname] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
     let botao = document.getElementById('btn-entrar');
     function checkFields() {
         if(botao){
-            if(nome && sobrenome && email && password) {
+            if(name && surname && email && password) {
                 botao.style.background='var(--color-secundary)';
                 botao.style.color='var(--color-button-text)';
                 botao.style.transition=' background-color 0.8s';
@@ -51,6 +54,25 @@ function RegisterUser() {
         }
     }
 
+    function handleCreateUsuario(e: FormEvent ) {
+        e.preventDefault();
+
+        api.post('usuario', {
+            name,
+            surname,
+            email,
+            password
+
+        }).then( () => {
+            alert('Cadastro realizado com sucesso');
+            
+            history1.push('/');
+        }).catch( () => {
+            alert('Erro no cadastro')
+            })
+
+    }
+
     return (
         <div id="page-register-user">
             <div className="page-register-user-content">
@@ -61,30 +83,34 @@ function RegisterUser() {
                     </Link>
                 </div>
 
-                <form id="form-register-user">
+                <form id="form-register-user" onSubmit={handleCreateUsuario}>
                     <div className="form-register-user-content">
                         <h2>Cadastro</h2>
                         <span>Preencha os dados abaixo para começar.</span>
                             <Input 
                                 name="nome"
                                 label=""
-                                value={nome}
+                                value={name}
                                 placeholder="Nome"
-                                onChange={ (e) => {setNome(e.target.value)} }
+                                onChange={ (e) => {setName(e.target.value)} }
+                                required
                             />
                             <Input 
                                 name="sobrenome"
                                 label=""
-                                value={sobrenome}
+                                value={surname}
                                 placeholder="Sobrenome"
-                                onChange={ (e) => {setSobrenome(e.target.value)} }
+                                onChange={ (e) => {setSurname(e.target.value)} }
+                                required
                             />
                             <Input 
                                 name="email"
                                 label=""
+                                type="email"
                                 value={email}
                                 placeholder="E-mail"
                                 onChange={ (e) => {setEmail(e.target.value)} }
+                                required
                             />
                             <Input
                                 id="password" 
@@ -94,6 +120,7 @@ function RegisterUser() {
                                 value={password}
                                 placeholder="Senha"
                                 onChange={ (e) => {setPassword(e.target.value)} }
+                                required
                            />
                         <img id="icon-password" className="icon-password" onClick={mostrarSenha} src={eyeIcon} alt="icon eye"/>
                         
