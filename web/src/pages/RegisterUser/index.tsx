@@ -12,7 +12,7 @@ import { Link, useHistory } from 'react-router-dom';
 import api from '../../services/api';
 
 function RegisterUser() {
-    const history1 = useHistory();
+    const history = useHistory();
 
     const [name, setName] = useState('');
     const [surname, setSurname] = useState('');
@@ -64,9 +64,8 @@ function RegisterUser() {
             password
 
         }).then( () => {
-            alert('Cadastro realizado com sucesso');
-            
-            history1.push('/');
+            history.push('/registered');
+
         }).catch( () => {
             alert('Erro no cadastro')
             })

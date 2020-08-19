@@ -30,7 +30,7 @@ function Routes() {
     return (
         <BrowserRouter>
             <Route path="/" exact component={Principal} />
-            <Route path="/home" exact component={Landing} />
+            {/* <Route path="/home" exact component={Landing} /> */}
             <PrivateRoute path="/home" component={Landing} />
             <Route path="/study" component={TeacherList} />
             <Route path="/give-classes" component={TeacherForm} />

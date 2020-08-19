@@ -52,31 +52,32 @@ function Principal() {
             }
         }
     }
+    
+    const data = {
+        email,
+        password
+    } 
 
     async function handleLogon( event: any ) {
         event.preventDefault();
-    
-        const data = {
-          email,
-          password
-        }
-    
-        try {
-    
-          const result = await api.post('signin', data)
+        
+        if (!email || !password) {
+            throw 'Informe e-mail e senha!';
+        } else {
+          
+            try {
+                const result = await api.post("signin", data);
 
-            // var a = login(result.data.token);
-            // // console.log(a)
-          localStorage.setItem('Authorization', result.data.token);
-    //por agora a função não retorna nada (Á TERMINAR...)
-          history.push('/home')
-    
-    
-        } catch (error) {
-          alert(error.response.data.error);
+                // localStorage.setItem('Authorization', result.data.token);
+                // console.log(result);
+                login(result.data.token);
+
+                history.push("/home");
+            } catch (err) {
+                return "Houve um problema com o login, verifique suas credenciais. T.T"
+          }
         }
-    
-      }
+      };
     
 
     return (
