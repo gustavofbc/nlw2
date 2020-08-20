@@ -48,14 +48,14 @@
 }
 
 /* botões da tela de login */
-.input-block input {
+.lado-b-content .input-block input {
     height: 55px;
     font: 400 1.4rem Poppins;
     border-radius: 8px 8px 0px 0px;
     color: var(--color-line-in-text);
 }
 
-.input-block + .input-block input{
+.lado-b-content .input-block + .input-block input{
     margin-top: -1.5rem;
     border-radius: 0px 0px 8px 8px;
 }

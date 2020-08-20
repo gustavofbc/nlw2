@@ -16,7 +16,7 @@ export default class UsuarioController{
         } = request.body;
 // função de encriptação da senha
         const encryptPassword = (password: string) => {
-            const salt = bcrypt.genSaltSync(10) //adiciona uma sequẽncia de números/letras para torná-la mais segura quando cryptografarmos
+            const salt = bcrypt.genSaltSync(10) //adiciona uma sequência de números/letras para torná-la mais segura quando cryptografarmos
             return bcrypt.hashSync(password, salt)
         }
     //senha criptografada

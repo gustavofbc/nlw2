@@ -5,13 +5,14 @@
 }
 
 .page-header .top-bar-container{
-    width: 90%;
+    width: 100%;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
     color: var(--text-in-primary);
-    padding: 1.6rem 0;
+    background-color: var(--color-primary-darker);
+    padding: 1.6rem 1.6rem;
 }
 
 .page-header .top-bar-container a {
@@ -25,6 +26,13 @@
 
 .page-header .top-bar-container > img {
     height: 1.6rem;
+}
+
+.page-header .top-bar-container p {
+    /* max-width: 30rem; */
+    font: 400 1.6rem Archivo;
+    line-height: 2.6rem;
+    color: var(--color-text-in-primary);
 }
 
 .page-header .header-content{
@@ -54,7 +62,9 @@
     }
 
     .page-header .top-bar-container {
-        max-width: 1100px;
+        width: 100%;
+        padding-left: 100px;
+        padding-right: 100px;
     }
 
     .page-header .header-content {

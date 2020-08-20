@@ -8,16 +8,18 @@ import "./styles.css";
 
 interface PageHeaderProps {
     title: string;
-    description?: string //o "?" torna-o opcional
+    description?: string; //o "?" torna-o opcional
+    pageTitle?: string;
 }
 
 const PageHeader: React.FC<PageHeaderProps> = (props) => {
     return (
         <header className="page-header">
             <div className="top-bar-container">
-                <Link to="/">
+                <Link to="/home">
                     <img src={backIcon} alt="Voltar"/>
                 </Link>
+                <p>{props.pageTitle}</p>
                 <img src={logoIcon} alt="Proffy"/>
             </div>
 

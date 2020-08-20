@@ -61,7 +61,7 @@ adiciona um novo elemento no final desse array*/
         }).then( () => {
             alert('Cadastro realizado com sucesso');
             
-            history.push('/');
+            history.push('/home');
         }).catch( () => {
             alert('Erro no cadastro')
             })
@@ -79,8 +79,10 @@ adiciona um novo elemento no final desse array*/
 
     return (
         <div id="page-teacher-form" className="container">
-            <PageHeader title='Que incrível que você quer dar aulas.' 
+            <PageHeader 
+                title='Que incrível que você quer dar aulas.' 
                 description='O primeiro passo é preencher esse formulário de inscrição'
+                pageTitle='Dar aulas'
             />
 
             <main>

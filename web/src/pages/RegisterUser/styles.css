@@ -43,7 +43,7 @@
 }
 
 #page-register-user button {
-    margin-top: 2rem;
+    margin-top: 4rem;
     margin-bottom: 10rem;
 }
 
@@ -51,6 +51,10 @@
     width: 45%;
     display: flex;
     flex-direction: column;
+}
+
+#form-register-user .form-register-user-content input{
+    margin-top: -1.2rem;
 }
 
 /* estilos da logo */

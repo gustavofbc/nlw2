@@ -44,11 +44,11 @@ function Principal() {
             if(tipoInput.type == "password"){
                 tipoInput.type = "text";
                 imgIcon.src = eyeOpenIcon;
-                imgIcon.style.padding = "10px";
+                imgIcon.style.padding = "5px";
             } else{
                 tipoInput.type = "password";
                 imgIcon.src = eyeIcon;
-                imgIcon.style.padding = "6px";
+                imgIcon.style.padding = "2px";
             }
         }
     }
