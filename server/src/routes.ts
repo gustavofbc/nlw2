@@ -12,9 +12,11 @@ const authController = new AuthController();
 
 routes.post('/classes', classesController.create);
 routes.get('/classes', classesController.index);
+routes.get('/classesCount', classesController.count);
 
 routes.post('/connections', connectionsController.create);
 routes.get('/connections', connectionsController.index);
+
 
 routes.post('/usuario', usuarioController.create);
 routes.post('/signin', authController.signin);

@@ -100,4 +100,12 @@ export default class ClassesController{
             })
         }
     }
+
+    async count(request: Request, response: Response) {
+        const totalProffys = await db('classes').count('* as total')
+
+        const { total } = totalProffys[0];
+
+        return response.json({total});
+    }
 }

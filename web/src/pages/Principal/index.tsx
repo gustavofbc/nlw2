@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Input from '../../components/Input';
 
 import logoImg from '../../assets/images/logo.svg';
@@ -78,7 +78,6 @@ function Principal() {
           }
         }
       };
-    
 
     return (
         <div id="page-principal">

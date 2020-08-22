@@ -1,13 +1,12 @@
-import React, { useState, FormEvent } from 'react';
+import React, { useState, FormEvent, useEffect } from 'react';
 import PageHeader from '../../components/PageHeader';
 import TeacherItem, {Teacher} from '../../components/TeacherItem';
 import Input from '../../components/Input';
 import Select from '../../components/Select';
 import api from '../../services/api';
+import smileIcon from '../../assets/images/icons/smile.svg';
 
 import "./styles.css";
-
-
 
 function TeacherList() {
     const [teachers, setTeachers] = useState([]);
@@ -28,15 +27,33 @@ function TeacherList() {
                 time
             }
         });
+        console.log(response);
+        if(!response.data[0]){
+            alert('Desculpe, não encontramos proffys :(');
+            
+        }
 
         setTeachers(response.data);
     }
+
+    const [totalProffys, setTotalProffys] = useState(0);
+
+    useEffect( () => {
+        api.get('classesCount').then(response => {
+            const {total} = response.data;
+
+            setTotalProffys(total);
+        })
+    }, []);
 
     return (
         <div id="page-teacher-list" className="container">
             <PageHeader 
                 title='Esses são os proffys disponíveis.'
                 pageTitle='Estudar'
+                img={smileIcon}
+                subtext={`Nós temos ${totalProffys}
+                professores.`}
             >
                 <form id="search-teachers" onSubmit={searchTeachers}>
                     <Select 

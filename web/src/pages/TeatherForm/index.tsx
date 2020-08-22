@@ -7,6 +7,7 @@ import Textarea from '../../components/Textarea';
 import Select from '../../components/Select';
 
 import warningIcon from '../../assets/images/icons/warning.svg';
+import rocketIcon from '../../assets/images/icons/rocket.svg';
 
 import './styles.css';
 import api from '../../services/api';
@@ -83,6 +84,8 @@ adiciona um novo elemento no final desse array*/
                 title='Que incrível que você quer dar aulas.' 
                 description='O primeiro passo é preencher esse formulário de inscrição'
                 pageTitle='Dar aulas'
+                img={rocketIcon}
+                subtext={`Preparare-se! \n vai ser o máximo.`}
             />
 
             <main>

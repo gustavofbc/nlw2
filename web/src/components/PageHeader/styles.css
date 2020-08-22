@@ -56,6 +56,39 @@
     margin-top: 2.4rem;
 }
 
+.page-header .header-content-container {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.page-header .header-content-container .container-header {
+    display: flex;
+    flex-direction: column;
+}
+
+.page-header .header-content-container .container-subtext {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.page-header .header-content-container .container-subtext img {
+    margin-top: 15px;
+}
+
+
+.page-header .header-content-container .container-subtext p {
+    font: 400 1.2rem Poppins;
+    max-width: 110px;
+    text-align: left;
+    align-items: center;
+    margin-left: 10px;
+}
+
+
+
 @media (min-width: 700px){
     .page-header{
         height: 340px;
