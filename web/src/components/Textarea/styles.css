@@ -8,6 +8,14 @@
 
 .textarea-block label{
     font-size: 1.4rem;
+    display: flex;
+    flex-direction: row;
+}
+
+.textarea-block p{
+    font: 400 0.8rem Poppins;
+    margin-left: 3%;
+    margin-top: 0.6rem;
 }
 
 .textarea-block textarea {
@@ -34,3 +42,4 @@
     right: 1.6rem;
     bottom: 7px;
 }
+

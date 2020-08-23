@@ -117,6 +117,22 @@
         padding: 0 6.4rem;
     }
 
+    #page-teacher-form main fieldset .fieldsetHeader{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    #page-teacher-form main fieldset .fieldsetHeader .input-block{
+        margin-top: 0;
+        max-width: 20rem;
+    }
+
+    #page-teacher-form main fieldset .fieldsetHeader select{
+        max-width: 35rem;
+    }
+
     #page-teacher-form main .schedule-item {
         display: grid;
         grid-template-columns: 2fr 1fr 1fr;

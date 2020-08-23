@@ -110,6 +110,7 @@ adiciona um novo elemento no final desse array*/
                     <Input 
                         name="whatsapp" 
                         label="Whatsapp"
+                        placeholder="(  ) _ ____-____"
                         value={whatsapp}
                         onChange={(e) => {setWhatsapp(e.target.value)} }
                     />
@@ -117,6 +118,8 @@ adiciona um novo elemento no final desse array*/
                     <Textarea 
                         name="bio" 
                         label="Biografia"
+                        maxLength={300}
+                        textComplement={`(Máximo de 300 caracteres)`}
                         value={bio}
                         onChange={(e) => {setBio(e.target.value)} }
                     />
@@ -124,6 +127,7 @@ adiciona um novo elemento no final desse array*/
 
                 <fieldset>
                     <legend>Sobre a aula</legend>
+                    <div className="fieldsetHeader">
                     
                     <Select 
                         name="subject" 
@@ -143,11 +147,13 @@ adiciona um novo elemento no final desse array*/
                         ]}
                     />
                     <Input 
-                        name="cost" 
+                        name="cost"
+                        placeholder="R$"
                         label="Custo da sua hora por aula"
                         value={cost}
                         onChange={(e) => { setCost(e.target.value) }}    
                     />
+                    </div>
                 </fieldset>
 
                 <fieldset>
