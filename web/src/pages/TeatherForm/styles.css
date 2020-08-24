@@ -26,6 +26,15 @@
     margin-top: 6.4rem;
 }
 
+#page-teacher-form main fieldset .button-remove{
+    background: none;
+    border: 0;
+    color: var(--color-text-in-button-error);
+    font: 700 1.4rem Archivo;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
 #page-teacher-form main fieldset legend {
     font: 700 2.4rem Archivo;
     color: var(--color-text-title);
@@ -115,6 +124,14 @@
 
     #page-teacher-form main fieldset {
         padding: 0 6.4rem;
+    }
+
+    #page-teacher-form main fieldset .button-remove{
+        display: flex;
+        margin-left: 70%;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
     }
 
     #page-teacher-form main fieldset .fieldsetHeader{

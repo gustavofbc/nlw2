@@ -36,6 +36,12 @@ adiciona um novo elemento no final desse array*/
         ]);
     }
 
+    function removeScheduleItem() {
+        let copyArray = [...scheduleItems]
+        copyArray.pop()
+        setScheduleItems(copyArray)
+    }
+
     function setScheduleItemValue(position: number, field: string, value: string) {
         const updatedScheduleItems = scheduleItems.map((scheduleItem, index) => {
             if(index === position){
@@ -194,10 +200,12 @@ adiciona um novo elemento no final desse array*/
                                     value={scheduleItem.to}
                                     onChange={e => setScheduleItemValue(index, 'to', e.target.value)}
                                 />
+
+                                <button className="button-remove" type="button" onClick={removeScheduleItem}>Excluir horário</button>
                             </div>
                         );
-                        })
-                    }
+                    })
+                }
                 </fieldset>
 
                 <footer>
