@@ -7,10 +7,12 @@ import landingImg from '../../assets/images/landing.svg'
 import studyIcon from '../../assets/images/icons/study.svg'
 import giveClassesIcon from '../../assets/images/icons/give-classes.svg'
 import purpleHeartIcon from '../../assets/images/icons/purple-heart.svg'
+import logoutIcon from '../../assets/images/icons/logout.svg'
 
 import api from '../../services/api';
 
 import './styles.css';
+import { logout } from "../../services/auth";
 
 function Landing() {
 
@@ -26,9 +28,16 @@ function Landing() {
 
   return (
     <div id="page-landing">
+      
+      <div className="page-landing-topBar">
+        <Link to="/">
+          <img src={logoutIcon} alt="" onClick={logout}/>
+        </Link>
+      </div>
+
       <div id="page-landing-content" className="container">
         <div className="logo-container">
-          <img src={logoImg} alt="Proffy"/>
+          <img src={logoImg} alt="Proffy"/> 
           <h2>Sua plataforma de estudos online.</h2>
         </div>
 

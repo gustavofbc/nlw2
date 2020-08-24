@@ -68,7 +68,7 @@ function Principal() {
             try {
                 const result = await api.post("signin", data);
 
-                // localStorage.setItem('Authorization', result.data.token);
+                // localStorage.setItem('User_id', result.data.usuarioExistente.id);
                 // console.log(result);
                 login(result.data.token);
 
