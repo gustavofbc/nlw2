@@ -5,7 +5,7 @@ import TeacherList from './pages/TeacherList';
 import TeacherForm from './pages/TeatherForm';
 import Principal from './pages/Principal';
 import UserCreatedNotification from './pages/UserCreatedNotification';
-import ResetSent from './pages/ResetSent';
+import ResetSentNotification from './pages/ResetSentNotification';
 import PasswordRecovery from './pages/PasswordRecovery';
 import RegisterUserForm from './pages/RegisterUserForm';
 
@@ -36,7 +36,7 @@ function Routes() {
             <Route path="/study" component={TeacherList} />
             <Route path="/give-classes" component={TeacherForm} />
             <Route path="/user-created-notification" component={UserCreatedNotification} />
-            <Route path="/reset-sent" component={ResetSent} />
+            <Route path="/reset-sent-notification" component={ResetSentNotification} />
             <Route path="/password-recovery" component={PasswordRecovery} />
             <Route path="/register-user" component={RegisterUserForm} />
             <Route path="/list-classes" component={ClassesList} />

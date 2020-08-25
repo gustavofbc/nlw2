@@ -3,7 +3,7 @@ import React from 'react';
 import './styles.css';
 import ViewNotification from '../../components/ViewNotification';
 
-function ResetSent() {
+function ResetSentNotification() {
     return (
         <div id="page-registered-principal" className="page-registered-principal">
             <ViewNotification
@@ -16,4 +16,4 @@ function ResetSent() {
     );
 }
 
-export default ResetSent;
+export default ResetSentNotification;
