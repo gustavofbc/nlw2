@@ -43,7 +43,7 @@
 .teacher-item footer {
     padding: 3.2rem 2rem;
     background: var(--color-box-footer);
-    border-top: 1px solid var(--olor-line-in-white);
+    border-top: 1px solid var(--color-line-in-white);
     margin-top: 3.2rem;
     display: flex;
     align-items: center;

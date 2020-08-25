@@ -11,7 +11,7 @@ import './styles.css';
 import { Link, useHistory } from 'react-router-dom';
 import api from '../../services/api';
 
-function RegisterUser() {
+function RegisterUserForm() {
     const history = useHistory();
 
     const [name, setName] = useState('');
@@ -64,7 +64,7 @@ function RegisterUser() {
             password
 
         }).then( () => {
-            history.push('/registered');
+            history.push('/user-created-notification');
 
         }).catch( () => {
             alert('Erro no cadastro')
@@ -149,4 +149,4 @@ function RegisterUser() {
     );
 }
 
-export default RegisterUser;
+export default RegisterUserForm;

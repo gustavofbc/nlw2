@@ -13,6 +13,8 @@ const authController = new AuthController();
 routes.post('/classes', classesController.create);
 routes.get('/classes', classesController.index);
 routes.get('/classesCount', classesController.count);
+routes.get('/classesAll', classesController.getAll);
+
 
 routes.post('/connections', connectionsController.create);
 routes.get('/connections', connectionsController.index);

@@ -4,12 +4,13 @@ import Landing from './pages/Landing';
 import TeacherList from './pages/TeacherList';
 import TeacherForm from './pages/TeatherForm';
 import Principal from './pages/Principal';
-import Registered from './pages/Registered';
+import UserCreatedNotification from './pages/UserCreatedNotification';
 import ResetSent from './pages/ResetSent';
 import PasswordRecovery from './pages/PasswordRecovery';
-import RegisterUser from './pages/RegisterUser';
+import RegisterUserForm from './pages/RegisterUserForm';
 
 import { isAuthenticated } from './services/auth';
+import ClassesList from './pages/ClassesList';
 
 const PrivateRoute: React.FC<RouteProps> = ({ component: Component, ...rest}) => {
     if(!Component) return null;
@@ -34,10 +35,11 @@ function Routes() {
             <PrivateRoute path="/home" component={Landing} />
             <Route path="/study" component={TeacherList} />
             <Route path="/give-classes" component={TeacherForm} />
-            <Route path="/registered" component={Registered} />
+            <Route path="/user-created-notification" component={UserCreatedNotification} />
             <Route path="/reset-sent" component={ResetSent} />
             <Route path="/password-recovery" component={PasswordRecovery} />
-            <Route path="/register-user" component={RegisterUser} />
+            <Route path="/register-user" component={RegisterUserForm} />
+            <Route path="/list-classes" component={ClassesList} />
         </BrowserRouter>
     )
 }

@@ -1,0 +1,100 @@
+.classes-item {
+    background: var(--color-box-base);
+    border: 1px solid var(--color-line-in-white);
+    border-radius: 0.8rem;
+    margin-top: 2.4rem;
+    overflow: hidden;
+}
+
+.classes-item header {
+    padding: 3.2rem 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.classes-item header div {
+    margin-left: 2.4rem;
+    display: flex;
+    flex-direction: row;
+}
+
+.classes-item header div img {
+    width: 7rem;
+    height: 7rem;
+    border-radius: 50%;
+}
+
+.classes-item header div div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.classes-item header div div strong{
+    font: 700 2.4rem Archivo;
+    display: block;
+    color: var(--color-text-title);
+}
+
+.classes-item header div div span{
+    font-size: 1.6rem;
+    display: block;
+    margin-top: 0.4rem;
+}
+
+.classes-item > p {
+    padding: 0.2rem;
+    font-size:  1.6rem;
+    line-height: 2.8rem;
+}
+
+.classes-item header .classes-button {
+    width: 5rem;
+    height: 4.2rem;
+    background: var(--color-primary);
+    border-radius: 0.8rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-evenly;
+    transition: 0.2s;
+    text-decoration: none;
+    margin-right: 2.4rem;
+    margin-bottom: 0.8rem;
+}
+
+.classes-item header .classes-button:hover {
+    background: var(--color-primary-dark);
+} 
+
+.classes-item p {
+    padding: 1.6rem 3.2rem;
+}
+
+.classes-item footer {
+    padding: 3.2rem 2rem;
+    background: var(--color-box-footer);
+    border-top: 1px solid var(--color-line-in-white);
+    margin-top: 3.2rem;
+}
+
+.classes-item footer p {
+    text-align: right;
+}
+
+.classes-item footer p strong {
+    color: var(--color-secundary);
+    font-size: 1.6rem;
+    margin-left: 0.8rem;
+}
+
+@media (min-width: 700px){
+    .classes-item header, footer {
+        padding: 3.2rem;
+    }
+
+    .classes-item p {
+        padding: 0 5rem;
+    }
+
+}

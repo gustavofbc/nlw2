@@ -108,4 +108,19 @@ export default class ClassesController{
 
         return response.json({total});
     }
+
+    async getAll(request: Request, response: Response) {
+
+        const filters = request.query;
+
+        const user_id = filters.user_id as string;
+
+        const classes = await db('classes')
+            .where('classes.user_id', '=', Number(user_id))
+            .join('users', 'classes.user_id', '=', 'users.id')
+            .select(['classes.*', 'users.*'])
+
+        return response.json(classes);
+    }
+
 }
