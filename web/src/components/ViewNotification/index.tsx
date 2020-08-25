@@ -10,6 +10,7 @@ interface ViewNotificationProps {
     message: string;
     subMessage?: string;
     textButton: string;
+    redirectTo: string;
 }
 
 const ViewNotification: React.FC<ViewNotificationProps> = (props) => {
@@ -30,7 +31,7 @@ const ViewNotification: React.FC<ViewNotificationProps> = (props) => {
                     <h1>{props.message}</h1>
             
                     <span>{props.subMessage}</span>
-                    <Link to="/" className="button">{props.textButton}</Link>
+                    <Link to={props.redirectTo} className="button">{props.textButton}</Link>
                  </main>
                     
             </div>

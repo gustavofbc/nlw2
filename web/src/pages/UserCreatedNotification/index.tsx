@@ -11,6 +11,7 @@ function UserCreatedNotification() {
                 subMessage="Agora você faz parte da plataforma da Proffy.
                             Tenha uma ótima experiência."
                 textButton="Fazer login"
+                redirectTo='/'
             />
         </div>
     );

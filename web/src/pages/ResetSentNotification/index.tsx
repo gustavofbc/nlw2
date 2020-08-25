@@ -11,6 +11,7 @@ function ResetSentNotification() {
                 subMessage="Boa, agora é só checar o e-mail que foi enviado para você
                             redefinir sua senha e aproveitar os estudos."
                 textButton="Voltar ao login"
+                redirectTo="/"
             />
         </div>
     );
