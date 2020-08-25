@@ -66,9 +66,9 @@ adiciona um novo elemento no final desse array*/
             cost: Number(cost),
             schedule: scheduleItems
         }).then( () => {
-            alert('Cadastro realizado com sucesso');
+            // alert('Cadastro realizado com sucesso');
             
-            history.push('/home');
+            history.push('/classes-created-notification');
         }).catch( () => {
             alert('Erro no cadastro')
             })
