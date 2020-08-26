@@ -3,6 +3,8 @@ import PageHeader from '../../components/PageHeader';
 import ClassesItem, {Teacher} from '../../components/ClassesItem';
 import api from '../../services/api';
 
+import clipboardIcon from '../../assets/images/icons/clipboard.svg'
+
 import "./styles.css";
 
 function ClassesList() {
@@ -25,10 +27,12 @@ function ClassesList() {
     }, []);
 
     return (
-        <div id="page-teacher-list" className="container">
+        <div id="page-list-classes" className="container">
             <PageHeader 
-                title='Você é um Proffy nessas classes.'
+                title='Essas são suas classes, Proffy.'
                 pageTitle='Suas Classes'
+                img={clipboardIcon}
+                subtext="Check!"
             >
             </PageHeader>
 
