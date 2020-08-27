@@ -13,20 +13,21 @@ import RegisterUserForm from './pages/RegisterUserForm';
 
 import { isAuthenticated } from './services/auth';
 import ClassesList from './pages/ClassesList';
+import PerfilForm from './pages/PerfilForm';
 
 const PrivateRoute: React.FC<RouteProps> = ({ component: Component, ...rest}) => {
     if(!Component) return null;
     return(
-    <Route {...rest} 
-        render={ props => 
-            isAuthenticated() ? (
-                <Component {...props} />
-            ) : (
-                <Redirect to={{ pathname: '/', state: {from: props.location} }} />
-            )
-        }
-    />
-    )
+        <Route {...rest} 
+            render={ props => 
+                isAuthenticated() ? (
+                    <Component {...props} />
+                ) : (
+                    <Redirect to={{ pathname: '/', state: {from: props.location} }} />
+                )
+            }
+        />
+        )
     }
 
 function Routes() {
@@ -42,6 +43,7 @@ function Routes() {
             <Route path="/classes-created-notification" component={ClassesCreatedNotification} />
             <Route path="/password-recovery" component={PasswordRecovery} />
             <Route path="/register-user" component={RegisterUserForm} />
+            <Route path="/perfil" component={PerfilForm} />
             <Route path="/list-classes" component={ClassesList} />
         </BrowserRouter>
     )

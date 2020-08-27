@@ -3,12 +3,11 @@ import { Link } from 'react-router-dom';
 
 import logoIcon from '../../assets/images/logo.svg';
 import backIcon from '../../assets/images/icons/back.svg';
-import smileIcon from '../../assets/images/icons/smile.svg';
 
 import "./styles.css";
 
 interface PageHeaderProps {
-    title: string;
+    title?: string;
     description?: string; //o "?" torna-o opcional
     pageTitle?: string;
     img?: string;
