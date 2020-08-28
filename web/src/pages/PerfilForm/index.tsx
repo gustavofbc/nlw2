@@ -76,7 +76,10 @@ adiciona um novo elemento no final desse array*/
 
     return (
         <div id="page-teacher-form" className="container">
-            <PageHeader pageTitle='Meu perfil'>
+            <PageHeader 
+                pageTitle='Meu perfil'
+                returnTo="/home"
+            >
                 <img className="background-img" src={backgroundPerfil} alt=""/>
             
                 <div className="perfil-content">

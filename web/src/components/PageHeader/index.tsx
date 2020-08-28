@@ -11,7 +11,7 @@ interface PageHeaderProps {
     description?: string; //o "?" torna-o opcional
     pageTitle?: string;
     img?: string;
-    // countProffys?: string;
+    returnTo: string;
     subtext?: string;
 }
 
@@ -19,7 +19,7 @@ const PageHeader: React.FC<PageHeaderProps> = (props) => {
     return (
         <header className="page-header">
             <div className="top-bar-container">
-                <Link to="/home">
+                <Link to={`${props.returnTo}`}>
                     <img src={backIcon} alt="Voltar"/>
                 </Link>
                 <p>{props.pageTitle}</p>

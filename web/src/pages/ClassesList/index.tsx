@@ -33,6 +33,7 @@ function ClassesList() {
                 pageTitle='Suas Classes'
                 img={clipboardIcon}
                 subtext="Check!"
+                returnTo="/home"
             >
             </PageHeader>
 

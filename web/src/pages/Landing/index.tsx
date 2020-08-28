@@ -8,6 +8,7 @@ import studyIcon from '../../assets/images/icons/study.svg'
 import giveClassesIcon from '../../assets/images/icons/give-classes.svg'
 import purpleHeartIcon from '../../assets/images/icons/purple-heart.svg'
 import logoutIcon from '../../assets/images/icons/logout.svg'
+import proffyIcon from '../../assets/images/icons/proffy.svg'
 
 import api from '../../services/api';
 
@@ -29,11 +30,20 @@ function Landing() {
   return (
     <div id="page-landing">
       
-      <div className="page-landing-topBar">
-        <Link to="/">
-          <img src={logoutIcon} alt="" onClick={logout}/>
-        </Link>
-      </div>
+      <header className="page-landing-topBar">
+        <div className="page-landing-topBar-content">
+          <Link to="/list-classes">
+            <div className="img-perfil-button">
+              <img className="perfil" src={proffyIcon} alt="" onClick={logout}/>
+              <p className="as">Proffy teste</p>
+            </div>
+          </Link>
+          
+          <Link to="/">
+            <img src={logoutIcon} alt="" onClick={logout}/>
+          </Link>
+        </div>
+      </header>
 
       <div id="page-landing-content" className="container">
         <div className="logo-container">

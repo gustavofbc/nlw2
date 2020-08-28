@@ -92,6 +92,7 @@ adiciona um novo elemento no final desse array*/
                 pageTitle='Dar aulas'
                 img={rocketIcon}
                 subtext={`Preparare-se! \n vai ser o máximo.`}
+                returnTo="/home"
             />
 
             <main>

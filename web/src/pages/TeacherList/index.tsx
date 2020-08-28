@@ -54,6 +54,7 @@ function TeacherList() {
                 img={smileIcon}
                 subtext={`Nós temos ${totalProffys}
                 professores.`}
+                returnTo="/home"
             >
                 <form id="search-teachers" onSubmit={searchTeachers}>
                     <Select 
