@@ -23,7 +23,7 @@
     color: var(--color-text-in-primary);
 }
 
-.logo-container{
+#page-principal .logo-container{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -32,7 +32,7 @@
     margin-top: -100px;
 }
 
-.logo-container img{
+#page-principal .logo-container img{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -175,7 +175,7 @@ button {
         background-color: var(--color-primary);
     }
 
-    .background-img{
+    #page-principal .background-img{
         height: 90%;
         position: absolute;
         overflow: hidden;
@@ -212,12 +212,12 @@ button {
         margin-top: -1.5rem;
     }
 
-    .logo-container img {
+    #page-principal .logo-container img {
         margin-top: 8rem;
         width: 51vw;
     }
 
-    .logo-container h3 {
+    #page-principal .logo-container h3 {
         font: 400 2.4rem Poppins;
         max-width: 300px;
     }
