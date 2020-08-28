@@ -1,73 +1,63 @@
 #page-principal{
-    width: 100%;
+    width: 100vw;
     height: 100vh;
-    overflow:hidden;
+    /* overflow:hidden; */
 
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-between;
-    background-color: var(--color-background);
 }
 
-
 .lado-a{
-    width: 55%;
-    height: 100vh;
-    display: flex;
+    width: 100%;
+    height: 25vh;
+    display: block;
     align-items: center;
     justify-content: center;
-
     background-color: var(--color-primary);
 }
 
-.background-img{
-    height: 90%;
-    position: absolute;
-    overflow: hidden;
+.lado-a h3{
+    margin: 5px;
+    font: 400 1.6rem Poppins;
+    color: var(--color-text-in-primary);
+}
 
+.logo-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    margin-top: -100px;
+}
+
+.logo-container img{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20rem;
 }
 
 .lado-b {
-    display: flex;
-    flex-direction: column;
-    width: 45vw;
-    align-items: center;
-    justify-content: center;
+    width: 42vw;
+    margin-top: 5rem;
 }
 
-.lado-b-content{
-    width: 50%;
-}
-
-.lado-b-content h2 {
-    margin-top: 12rem;
-    font: 700 2.8rem poppins;
-    color: #32264D;
-    margin-bottom: 2rem;
-}
-
-/* botões da tela de login */
 .lado-b-content .input-block input {
-    height: 55px;
+    height: 50px;
     font: 400 1.4rem Poppins;
     border-radius: 8px 8px 0px 0px;
     color: var(--color-line-in-text);
 }
 
 .lado-b-content .input-block + .input-block input{
-    margin-top: -1.5rem;
+    margin-top: -1.4rem;
     border-radius: 0px 0px 8px 8px;
 }
 
-.logo-container img {
-    max-width: 51vw;
-}
-
-.logo-container h3 {
-    font: 400 2.4rem Poppins;
-    max-width: 300px;
-    color: var(--color-text-in-primary);
+.lado-b .lado-b-content h2{
+    margin-top: 3rem;
 }
 
 button {
@@ -87,17 +77,35 @@ button {
     margin-top: 3.2rem;
 }
 
-.lado-b-options{
-    margin-top: 2.4rem;
+.lado-b-options {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 2rem;
+    margin-bottom: 5rem;
 }
 
-.lado-b-options input{
-    margin-right: 0.8rem;
+.lado-b-options label {
+    font: 400 1.4rem Poppins;
+    color: var(--color-text-complement);
+}
+
+.lado-b-options a {
+    font: 400 1.4rem Poppins;
+    margin-left: 1rem;
+    text-decoration: none;
+    transition: 0.2s;
+    color: var(--color-text-complement);
+}
+
+.lado-b-options a:hover{
+    color: var(--color-primary);
 }
 
 .lado-b-options input[type='checkbox'] {
     -webkit-appearance: none;
     cursor: pointer;
+    margin-right: 0.8rem;
  }
 
  .lado-b-options input[type='checkbox'] {
@@ -105,7 +113,6 @@ button {
     width: 15px;
     border-radius: 5px;
     background-color: var(--color-box-base);
-    /* border: 1px solid; */
  }
 
  .lado-b-options input[type='checkbox']:checked {
@@ -116,61 +123,158 @@ button {
     background-image: url("../../assets/images/icons/success-icon-remember.svg");
     background-repeat: no-repeat;
     background-size: 100%;
-    }
+ }
 
-.lado-b-options label{
-    font-size: 1.3rem;
-    margin-right: 5rem;
-    color: var(--color-text-complement);
-}
-
-.lado-b-options a {
-    font-size: 1.3rem;
-    cursor: pointer;
-    color: var(--color-text-complement);
-    text-decoration: none;
-}
-.lado-b-options a:hover{
-    color: var(--color-primary);
-}
-
-.lado-b-footer {
+ .lado-b-footer {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    width: 70%;
+    width: 100%;
     margin-top: 7rem;
 }
 
 .lado-b-footer span {
-    font-size: 1.2rem;
+    font: 400 1.4rem Poppins;
     color: var(--color-text-complement);
 }
 
-.link-register{
-    width: 60%;
-    margin-top: -35px;
-    /* margin-left: 50px; */
-    text-align: left;
-    
+#icon-password-login {
+    float: right;
+    position: relative;
+    margin-top: -3.8rem;
+    margin-right: 1.4rem;
 }
 
 .register{
     color: var(--color-primary-dark);
-    font: 700 1.3rem Poppins;
+    font: 700 1.4rem Poppins;
 }
+ 
+@media(min-width: 900px){
 
-.icon-password-login {
-    position: absolute;
-    margin-left: 250px;
-    margin-top: -40px;
-}
+    #page-principal{
+        width: 100%;
+        height: 100vh;
+        overflow:hidden;
 
-.total-connections-principal img {
-    width: 12px;
-    position: absolute;
-    margin-top: 5px;
-    margin-left: 5px;
-    opacity: 0.8;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        background-color: var(--color-background);
+    }
+
+    .lado-a{
+        width: 55%;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        background-color: var(--color-primary);
+    }
+
+    .background-img{
+        height: 90%;
+        position: absolute;
+        overflow: hidden;
+    }
+
+    .lado-b {
+        display: flex;
+        flex-direction: column;
+        width: 45vw;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .lado-b-content{
+        width: 50%;
+    }
+
+    .lado-b-content h2 {
+        margin-top: 12rem;
+        font: 700 2.8rem poppins;
+        color: #32264D;
+        margin-bottom: 2rem;
+    }
+
+    /* botões da tela de login */
+    .lado-b-content .input-block input {
+        height: 55px;
+        font: 400 1.4rem Poppins;
+        border-radius: 8px 8px 0px 0px;
+        color: var(--color-line-in-text);
+    }
+
+    .lado-b-content .input-block + .input-block input{
+        margin-top: -1.5rem;
+    }
+
+    .logo-container img {
+        margin-top: 8rem;
+        width: 51vw;
+    }
+
+    .logo-container h3 {
+        font: 400 2.4rem Poppins;
+        max-width: 300px;
+    }
+
+    .lado-b-options{
+        margin-top: 2.4rem;
+    }
+
+    .lado-b-options input{
+        margin-right: 0.8rem;
+    }
+
+    .lado-b-options label{
+        font-size: 1.3rem;
+        margin-right: 9rem;
+        color: var(--color-text-complement);
+    }
+
+    .lado-b-options a {
+        font-size: 1.3rem;
+        cursor: pointer;
+        margin-left: -2rem;
+        color: var(--color-text-complement);
+        text-decoration: none;
+    }
+
+    .lado-b-footer {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        width: 70%;
+        margin-top: 7rem;
+    }
+
+    .lado-b-footer span {
+        font-size: 1.4rem;
+        color: var(--color-text-complement);
+    }
+    
+
+    .link-register{
+        width: 60%;
+        margin-top: -35px;
+        text-align: left;
+    }
+
+    .register{
+        color: var(--color-primary-dark);
+        font: 700 1.3rem Poppins;
+    }
+
+    .total-connections-principal img {
+        width: 12px;
+        position: absolute;
+        margin-top: 5px;
+        margin-left: 5px;
+        opacity: 0.8;
+    }
 }

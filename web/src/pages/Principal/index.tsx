@@ -105,6 +105,7 @@ function Principal() {
                         onChange={ (e) => {setEmail(e.target.value)} }
                         required
                     />
+
                     <Input
                         id="password" 
                         name="senha" 
