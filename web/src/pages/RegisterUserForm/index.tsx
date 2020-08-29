@@ -85,7 +85,7 @@ function RegisterUserForm() {
                 <form id="form-register-user" onSubmit={handleCreateUsuario}>
                     <div className="form-register-user-content">
                         <h2>Cadastro</h2>
-                        <span>Preencha os dados abaixo para começar.</span>
+                        <span className="subtitle-form-register-user">Preencha os dados abaixo para começar.</span>
                             <Input 
                                 name="nome"
                                 label=""

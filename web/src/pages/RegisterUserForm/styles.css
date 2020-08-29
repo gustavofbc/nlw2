@@ -1,24 +1,15 @@
 #page-register-user{
-    width: 100%;
+    width: 100vw;
     height: 100vh;
-    overflow: hidden;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    background-color: var(--color-background);
-}
-
-.page-register-user-content {
-    width: 50%;
 }
 
 #page-register-user .top-bar-container{
     width: 50%;
-    margin-top: 50px;
     display: flex;
-    align-items: center;
-    justify-content: center
+    align-items: initial;
+    margin-bottom: 5rem;
+    margin-left: 1.6rem;
+    margin-top: 1.4rem;
 }
 
 #page-register-user form {
@@ -27,69 +18,142 @@
     justify-content: center;
 }
 
-#page-register-user h2 {
-    margin-top: 10rem;
-    max-width: 250px;
-    font: 700 2.8rem poppins;
-    color: #32264D;
-    margin-bottom: 2rem;
-}
-
-#page-register-user span {
-    font: 400 1.3rem Poppins;
-    margin-top: -0.8rem;
-    margin-bottom: 2.4rem;
-    max-width: 200px;
-}
-
-#page-register-user button {
-    margin-top: 4rem;
-    margin-bottom: 10rem;
-}
-
-#form-register-user .form-register-user-content{
-    width: 45%;
-    display: flex;
-    flex-direction: column;
-}
-
-#form-register-user .form-register-user-content input{
-    margin-top: -1.2rem;
-}
-
-/* estilos da logo */
-#logo-content {
-    width: 55%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+#page-register-user #logo-content {
     background-color: var(--color-primary);
 }
 
-#logo-content img {
-    max-width: 90%;
-    max-height: 90%;
-    overflow: hidden;
+#page-register-user #logo-content .background-img{
+    width: 0;
 }
 
-#logo-content .logo-content-principal img {
-    width: 75%;
-    height: 75%;
-    padding-left: 5rem;
-    margin-top: -3.2rem;
+#page-register-user .icon-password{
+    float: right;
+    position: relative;
+    margin-top: -3.8rem;
 }
 
-#logo-content h3 {
-    max-width: 300px;
-    font: 400 2.4rem Poppins;
-    padding-left: 5rem;
+#page-register-user button {
+    margin-bottom: 2rem;
+}
 
+#form-register-user .form-register-user-content input{
+    
+}
+
+#page-register-user #logo-content .background-img {
+    width: 10px;
+}
+
+#page-register-user #logo-content h3 {
     color: var(--color-text-in-primary);
 }
 
-.icon-password{
-    position: relative;
-    margin-left: 200px;
-    margin-top: -40px;
+@media(min-width: 700px){
+#page-register-user{
+        width: 100%;
+        height: 100vh;
+        overflow: hidden;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        background-color: var(--color-background);
+    }
+
+    #page-register-user .page-register-user-content {
+        width: 50%;
+    }
+
+    #page-register-user #logo-content .background-img{
+        width: 100% !important;
+        height: 90%;
+    }
+
+    #page-register-user .top-bar-container{
+        width: 50%;
+        margin-top: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center
+    }
+
+    #page-register-user h2 {
+        margin-top: 10rem;
+        max-width: 250px;
+        font: 700 2.8rem poppins;
+        color: #32264D;
+        margin-bottom: 2rem;
+    }
+
+    #page-register-user span {
+        font: 400 1.3rem Poppins;
+        margin-top: -0.8rem;
+        margin-bottom: 2.4rem;
+        max-width: 200px;
+    }
+
+    #page-register-user button {
+        margin-top: 4rem;
+        margin-bottom: 10rem;
+    }
+
+    #page-register-user  #form-register-user .form-register-user-content{
+        width: 45%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    #page-register-user  #form-register-user .form-register-user-content input{
+        margin-top: -1.2rem;
+    }
+
+    /* estilos da logo */
+    #page-register-user #logo-content {
+        width: 55%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--color-primary);
+    }
+
+    #page-register-user #logo-content .background-img {
+        width: 90%;
+        height: 90%;
+        margin-left: 10rem;
+    }
+
+    #page-register-user #logo-content .logo-content-principal img {
+        width: 75%;
+        height: 75%;
+        padding-left: 5rem;
+        margin-top: -3.2rem;
+    }
+
+    #page-register-user #logo-content h3 {
+        max-width: 300px;
+        font: 400 2.4rem Poppins;
+        padding-left: 5rem;
+
+    }
+
+    #page-register-user .icon-password{
+        float: right;
+        position: relative;
+        margin-top: -3.8rem;
+        margin-left: 20rem;
+    }
+
+    #page-register-user .logo-content-principal img{
+        position: absolute;
+        width: 300px !important;
+        margin-left: -40rem;
+        margin-top: -300px !important;
+        
+    }
+
+    #page-register-user .logo-content-principal h3{
+        position: absolute;
+        margin-left: -40rem;
+    }
 }
