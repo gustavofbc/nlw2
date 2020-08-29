@@ -119,8 +119,10 @@ function Principal() {
                     <img id="icon-password-login" className="icon-password-login" onClick={mostrarSenha} src={eyeIcon} alt="icon eye"/>
 
                     <div className="lado-b-options">
-                        <input type="checkbox"/>
-                        <label>Lembrar-me</label>
+                        <label>
+                            <input type="checkbox"/>
+                            Lembrar-me
+                        </label>
 
                         <Link to="/password-recovery">
                             <a type="button">Esqueci minha senha</a>

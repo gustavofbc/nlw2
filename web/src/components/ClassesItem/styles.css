@@ -3,6 +3,8 @@
     border: 1px solid var(--color-line-in-white);
     border-radius: 0.8rem;
     margin-top: 2.4rem;
+    margin-left: 1.6rem;
+    margin-right: 1.6rem;
     overflow: hidden;
 }
 
@@ -11,6 +13,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    overflow: hidden;
 }
 
 .classes-item header div {
