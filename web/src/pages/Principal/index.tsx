@@ -137,7 +137,7 @@ function Principal() {
                 
                 
                 <footer className="lado-b-footer">
-                    <span>Não tem conta?</span>
+                    <span className="no-have-account">Não tem conta?</span>
 
                     <span className="total-connections-principal">
                         É de graça <img src={purpleHeartIcon} alt="Coração roxo"/>

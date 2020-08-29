@@ -1,6 +1,7 @@
 #page-password-recovery{
     width: 100vw;
     height: 100vh;
+    overflow: hidden;
 }
 
 #page-password-recovery .page-password-recovery-content{
@@ -43,11 +44,13 @@
 #page-password-recovery #logo-content .logo-content-principal img{
     margin-top: 10px;
     margin-left: 4rem;
+    width: 50%;
 }
 
 #page-password-recovery #logo-content .logo-content-principal h3{
     font: 400 1.6rem Poppins;
     margin-left: 4rem;
+    color: var(--color-text-in-primary);
 }
 
 #page-password-recovery #logo-content {
@@ -142,7 +145,10 @@
     #page-password-recovery #logo-content .logo-content-principal img{
         margin-top: -385px;
         margin-left: 4rem;
+        width: 60%;
     }
+
+    
     #page-password-recovery #logo-content .logo-content-principal h3{
         position: absolute;
         margin-top: -280px;
