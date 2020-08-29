@@ -65,7 +65,7 @@ function PasswordRecovery() {
 
                 <div className="logo-container">
                     <div className="logo-content-principal">
-                        <img src={logoImg} alt="Proffy"/>
+                        <img className="proffy" src={logoImg} alt="Proffy"/>
                         <h3>Sua plataforma de estudos online.</h3>
                     </div>
                 </div>

@@ -8,7 +8,7 @@
     align-items: center;
 }
 
-.lado-a{
+#page-principal .lado-a{
     width: 100%;
     height: 25vh;
     display: block;
@@ -17,7 +17,7 @@
     background-color: var(--color-primary);
 }
 
-.lado-a h3{
+#page-principal .lado-a h3{
     margin: 5px;
     font: 400 1.6rem Poppins;
     color: var(--color-text-in-primary);
@@ -146,7 +146,7 @@ button {
     margin-right: 1.4rem;
 }
 
-.register{
+#page-principal .register{
     color: var(--color-primary-dark);
     font: 700 1.4rem Poppins;
 }
@@ -165,7 +165,7 @@ button {
         background-color: var(--color-background);
     }
 
-    .lado-a{
+    #page-principal .lado-a{
         width: 55%;
         height: 100vh;
         display: flex;
@@ -181,7 +181,7 @@ button {
         overflow: hidden;
     }
 
-    .lado-b {
+    #page-principal .lado-b {
         display: flex;
         flex-direction: column;
         width: 45vw;
@@ -189,11 +189,11 @@ button {
         justify-content: center;
     }
 
-    .lado-b-content{
+    #page-principal .lado-b-content{
         width: 50%;
     }
 
-    .lado-b-content h2 {
+    #page-principal .lado-b-content h2 {
         margin-top: 12rem;
         font: 700 2.8rem poppins;
         color: #32264D;
@@ -201,42 +201,43 @@ button {
     }
 
     /* botões da tela de login */
-    .lado-b-content .input-block input {
+    #page-principal .lado-b-content .input-block input {
         height: 55px;
         font: 400 1.4rem Poppins;
         border-radius: 8px 8px 0px 0px;
         color: var(--color-line-in-text);
     }
 
-    .lado-b-content .input-block + .input-block input{
+    #page-principal .lado-b-content .input-block + .input-block input{
         margin-top: -1.5rem;
     }
 
     #page-principal .logo-container img {
-        margin-top: 8rem;
-        width: 51vw;
+        margin-top: 7rem;
+        width: 25vw;
     }
 
     #page-principal .logo-container h3 {
         font: 400 2.4rem Poppins;
+        margin-right: 3rem;
         max-width: 300px;
     }
 
-    .lado-b-options{
+    #page-principal .lado-b-options{
         margin-top: 2.4rem;
     }
 
-    .lado-b-options input{
+    #page-principal .lado-b-options input{
         margin-right: 0.8rem;
     }
 
-    .lado-b-options label{
+    #page-principal .lado-b-options label{
         font-size: 1.3rem;
         margin-right: 9rem;
         color: var(--color-text-complement);
     }
 
-    .lado-b-options a {
+    #page-principal .lado-b-options a {
         font-size: 1.3rem;
         cursor: pointer;
         margin-left: -2rem;
@@ -244,7 +245,7 @@ button {
         text-decoration: none;
     }
 
-    .lado-b-footer {
+    #page-principal .lado-b-footer {
         display: flex;
         flex-direction: row;
         align-items: center;
@@ -253,7 +254,7 @@ button {
         margin-top: 7rem;
     }
 
-    .lado-b-footer span {
+    #page-principal .lado-b-footer span {
         font-size: 1.4rem;
         color: var(--color-text-complement);
     }
