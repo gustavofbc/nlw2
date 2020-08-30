@@ -3,6 +3,36 @@
     height: 100vh;
 }
 
+#page-list-classes .button-edit {
+    width: 20rem;
+    height: 5rem;
+    border-radius: 0.8rem;
+    font: 700 1.4rem Archivo;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-decoration: none;
+    color: var(--color-button-text);
+    background-color: var(--color-secundary);
+
+    transition: background-color 0.2s;
+}
+
+#page-list-classes .perfil-edit-content {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    padding-top: 2rem;
+}
+
+#page-list-classes .button-edit img {
+    height: 2.4rem;
+    margin-right: 0.4rem;
+}
+
 @media(min-width: 700px){
     #page-list-classes {
         max-width: 100%;

@@ -27,22 +27,28 @@
     padding: 0rem 1.6rem;
 }
 
-.img-perfil-button {
+.perfil {
     display: flex;
     flex-direction: row;
     align-items: center;
-}
-
-.img-perfil-button img {
-    width: 5rem;
-    height: 5rem;
-    border-radius: 50%;
-}
-
-.img-perfil-button p {
     font: 400 1.6rem Poppins;
     margin-left: 10px;
     color: var(--color-text-in-name-perfil);
+
+    height: 6rem;
+    width: 16rem;
+    border-radius: 8px;
+}
+
+.perfil img {
+    width: 4rem;
+    height: 4rem;
+    margin: 0px 10px;
+}
+
+#page-landing .page-landing-topBar-content a{
+    text-decoration: none !important;
+    font: 400 1.6rem Poppins;
 }
 
 .logo-container img {
@@ -62,7 +68,7 @@
 .logo-container h2 {
     font-weight: 500;
     font-size: 1.8rem;
-    line-height: 1.6rem;
+    line-height: 3.2rem;
 }
 
 .buttons-container {

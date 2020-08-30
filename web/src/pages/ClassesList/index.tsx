@@ -4,8 +4,10 @@ import ClassesItem, {Teacher} from '../../components/ClassesItem';
 import api from '../../services/api';
 
 import clipboardIcon from '../../assets/images/icons/clipboard.svg'
+import editPerfilIcon from '../../assets/images/icons/edit-perfil.svg'
 
 import "./styles.css";
+import { Link } from 'react-router-dom';
 
 function ClassesList() {
     const [teachers, setTeachers] = useState([]);
@@ -35,6 +37,12 @@ function ClassesList() {
                 subtext="Check!"
                 returnTo="/home"
             >
+                <div className="perfil-edit-content">
+                    <Link to="/list-classes" className="button-edit">
+                        <img src={editPerfilIcon} alt=""/>
+                        Editar dados pessoais
+                    </Link>
+                </div>
             </PageHeader>
 
             <main>
