@@ -5,6 +5,7 @@ import TeacherList from './pages/TeacherList';
 import TeacherForm from './pages/TeatherForm';
 import Principal from './pages/Principal';
 import UserCreatedNotification from './pages/UserCreatedNotification';
+import UserUpdatedNotification from './pages/UserUpdatedNotification';
 import ResetSentNotification from './pages/ResetSentNotification';
 import ClassesCreatedNotification from './pages/ClassesCreatedNotification';
 
@@ -41,6 +42,7 @@ function Routes() {
             <Route path="/give-classes" component={TeacherForm} />
 
             <Route path="/user-created-notification" component={UserCreatedNotification} />
+            <Route path="/user-updated-notification" component={UserUpdatedNotification} />
             <Route path="/reset-sent-notification" component={ResetSentNotification} />
             <Route path="/classes-created-notification" component={ClassesCreatedNotification} />
             

@@ -2,21 +2,22 @@ import React from 'react';
 
 import './styles.css';
 import ViewNotification from '../../components/ViewNotification';
-import successIcon from '../../assets/images/icons/success-check-icon.svg';
+import  successIcon from '../../assets/images/icons/success-update-perfil.svg';
 
-function UserCreatedNotification() {
+
+function UserUpdatedNotification() {
     return (
         <div id="page-registered-principal" className="page-registered-principal">
             <ViewNotification
-                message="Cadastro concluído" 
-                subMessage="Agora você faz parte da plataforma da Proffy.
+                message="Dados atualizados" 
+                subMessage="Dados pessoais atualizados com sucesso.
                             Tenha uma ótima experiência."
-                textButton="Fazer login"
-                redirectTo='/'
+                textButton="Retornar ao perfil"
+                redirectTo='/list-classes'
                 iconImage={successIcon}
             />
         </div>
     );
 }
 
-export default UserCreatedNotification;
+export default UserUpdatedNotification;

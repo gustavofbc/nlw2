@@ -2,6 +2,7 @@ import React from 'react';
 
 import './styles.css';
 import ViewNotification from '../../components/ViewNotification';
+import successIcon from '../../assets/images/icons/success-check-icon.svg';
 
 function ResetSentNotification() {
     return (
@@ -12,6 +13,7 @@ function ResetSentNotification() {
                             redefinir sua senha e aproveitar os estudos."
                 textButton="Voltar ao login"
                 redirectTo="/"
+                iconImage={successIcon}
             />
         </div>
     );

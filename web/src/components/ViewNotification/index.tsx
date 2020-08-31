@@ -2,7 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 import background from '../../assets/images/success-background.svg';
-import  successIcon from '../../assets/images/icons/success-check-icon.svg';
 
 import './styles.css';
 
@@ -11,6 +10,7 @@ interface ViewNotificationProps {
     subMessage?: string;
     textButton: string;
     redirectTo: string;
+    iconImage: string;
 }
 
 const ViewNotification: React.FC<ViewNotificationProps> = (props) => {
@@ -23,7 +23,7 @@ const ViewNotification: React.FC<ViewNotificationProps> = (props) => {
                     />
                     <div className="success">
                         <img className="success-icon"
-                            src={successIcon} alt="icon success"
+                            src={props.iconImage} alt="icon success"
                         />
                     </div>
 

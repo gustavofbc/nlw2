@@ -21,7 +21,6 @@ function TeacherForm() {
 // CRIAR FUNÇÃO PARA RECUPERAR OS DADOS DO USUÁRIO NOS CAMPOS DE INPUT E A IMAGEM ATUAL
 
 // CRIAR FUNÇÃO DE ATUALIZAÇÃO DOS DADOS DO USUÁRIO
-
     function handleUpdateUsuario(e: FormEvent ) {
     //     e.preventDefault();
 
@@ -32,7 +31,7 @@ function TeacherForm() {
     //     }).then( () => {
     //         // alert('Atualização de dados realizado com sucesso');
             
-    //         history.push('/classes-created-notification');
+            history.push('/user-updated-notification');
     //     }).catch( () => {
     //         alert('Erro no cadastro')
             // })

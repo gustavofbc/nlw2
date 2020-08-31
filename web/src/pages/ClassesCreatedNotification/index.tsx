@@ -2,6 +2,7 @@ import React from 'react';
 
 import './styles.css';
 import ViewNotification from '../../components/ViewNotification';
+import successIcon from '../../assets/images/icons/success-check-icon.svg';
 
 function ClassesCreatedNotification() {
     return (
@@ -12,6 +13,7 @@ function ClassesCreatedNotification() {
                     Agora é só ficar de olho no seu WhatsApp."
                 textButton="Acessar"
                 redirectTo="/study"
+                iconImage={successIcon}
             />
         </div>
     );
