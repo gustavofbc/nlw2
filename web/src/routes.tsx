@@ -14,6 +14,7 @@ import RegisterUserForm from './pages/RegisterUserForm';
 import { isAuthenticated } from './services/auth';
 import ClassesList from './pages/ClassesList';
 import PerfilForm from './pages/PerfilForm';
+import EditPerfilForm from './pages/EditPerfilForm';
 
 const PrivateRoute: React.FC<RouteProps> = ({ component: Component, ...rest}) => {
     if(!Component) return null;
@@ -38,12 +39,15 @@ function Routes() {
             <PrivateRoute path="/home" component={Landing} />
             <Route path="/study" component={TeacherList} />
             <Route path="/give-classes" component={TeacherForm} />
+
             <Route path="/user-created-notification" component={UserCreatedNotification} />
             <Route path="/reset-sent-notification" component={ResetSentNotification} />
             <Route path="/classes-created-notification" component={ClassesCreatedNotification} />
+            
             <Route path="/password-recovery" component={PasswordRecovery} />
             <Route path="/register-user" component={RegisterUserForm} />
             <Route path="/perfil" component={PerfilForm} />
+            <Route path="/edit-perfil" component={EditPerfilForm} />
             <Route path="/list-classes" component={ClassesList} />
         </BrowserRouter>
     )

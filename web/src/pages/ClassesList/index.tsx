@@ -38,7 +38,7 @@ function ClassesList() {
                 returnTo="/home"
             >
                 <div className="perfil-edit-content">
-                    <Link to="/list-classes" className="button-edit">
+                    <Link to="/edit-perfil" className="button-edit">
                         <img src={editPerfilIcon} alt=""/>
                         Editar dados pessoais
                     </Link>
