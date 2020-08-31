@@ -71,14 +71,14 @@
 
     #page-register-user .top-bar-container{
         width: 50%;
-        margin-top: 50px;
+        margin-top: 60px;
         display: flex;
         align-items: center;
         justify-content: center
     }
 
     #page-register-user h2 {
-        margin-top: 10rem;
+        margin-top: 1.6rem;
         max-width: 250px;
         font: 700 2.8rem poppins;
         color: #32264D;
@@ -98,7 +98,7 @@
     }
 
     #page-register-user  #form-register-user .form-register-user-content{
-        width: 45%;
+        width: 55%;
         display: flex;
         flex-direction: column;
     }

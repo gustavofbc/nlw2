@@ -10,6 +10,8 @@ import cameraIcon from '../../assets/images/icons/camera.svg';
 
 import './styles.css';
 import api from '../../services/api';
+import { getToken } from '../../services/auth';
+
 
 function TeacherForm() {
     const history = useHistory();
@@ -18,20 +20,23 @@ function TeacherForm() {
     const [surname, setSurname] = useState('');
     const [email, setEmail] = useState('');
 
+    const [avatar, setAvatar] = useState('');
+
 // CRIAR FUNÇÃO PARA RECUPERAR OS DADOS DO USUÁRIO NOS CAMPOS DE INPUT E A IMAGEM ATUAL
 
 // CRIAR FUNÇÃO DE ATUALIZAÇÃO DOS DADOS DO USUÁRIO
     function handleUpdateUsuario(e: FormEvent ) {
-    //     e.preventDefault();
-
+        e.preventDefault();
+        let token = getToken();
+        return alert(token);
     //     api.post('classes', {
     //         name,
     //         surname,
     //         email,
     //     }).then( () => {
-    //         // alert('Atualização de dados realizado com sucesso');
+            alert(console.log(token));
             
-            history.push('/user-updated-notification');
+            // history.push('/user-updated-notification');
     //     }).catch( () => {
     //         alert('Erro no cadastro')
             // })
@@ -41,7 +46,7 @@ function TeacherForm() {
 // CRIAR FUNÇÃO P/ ATUALIZAR IMAGEM, TORNAR O CAMPO UM INPUT E LIDAR COM ISSO NO BANCO
 
     function updateImage() {
-        return alert('Abrir Input pra permitir o envio da imagem');
+        return alert('imagem')
     }
 
     return (
@@ -77,6 +82,13 @@ function TeacherForm() {
                         label="Sobrenome"
                         value={surname}
                         onChange={(e) => {setSurname(e.target.value)} }
+                    />
+
+                     <Input 
+                        name="avatar" 
+                        label="Avatar"
+                        value={avatar}
+                        onChange={(e) => {setAvatar(e.target.value)} }
                     />
 
                     <Input 

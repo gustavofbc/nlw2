@@ -16,7 +16,6 @@ function TeacherForm() {
     const history = useHistory();
 
     const [name, setName] = useState('');
-    const [avatar, setAvatar] = useState('');
     const [whatsapp, setWhatsapp] = useState('');
     const [bio, setBio] = useState('');
 
@@ -59,7 +58,6 @@ adiciona um novo elemento no final desse array*/
 
         api.post('classes', {
             name,
-            avatar,
             whatsapp,
             bio,
             subject,
@@ -107,12 +105,12 @@ adiciona um novo elemento no final desse array*/
                         onChange={(e) => {setName(e.target.value)} }
                     />
 
-                    <Input 
+                    {/* <Input 
                         name="avatar" 
                         label="Avatar"
                         value={avatar}
                         onChange={(e) => {setAvatar(e.target.value)} }
-                    />
+                    /> */}
 
                     <Input 
                         name="whatsapp" 

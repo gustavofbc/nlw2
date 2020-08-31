@@ -22,7 +22,9 @@ export default class AuthController{
             const usuarioExistente = await db('usuario')
                     .where({email: email})
                     .first()
-            
+
+                    console.log(usuarioExistente);
+                    
                 if(!usuarioExistente){
                     throw 'Usuário não encontrado!'
                 }

@@ -11,6 +11,7 @@ export default class UsuarioController{
         const {
             name,
             surname,
+            avatar,
             email,
             password,
         } = request.body;
@@ -27,6 +28,7 @@ export default class UsuarioController{
              await trx('usuario').insert({
                 name,
                 surname,
+                avatar,
                 email,
                 password:senhaEncrypted,
             });

@@ -16,13 +16,14 @@ function RegisterUserForm() {
 
     const [name, setName] = useState('');
     const [surname, setSurname] = useState('');
+    const [avatar, setAvatar] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
     let botao = document.getElementById('btn-entrar');
     function checkFields() {
         if(botao){
-            if(name && surname && email && password) {
+            if(name && surname && avatar && email && password) {
                 botao.style.background='var(--color-secundary)';
                 botao.style.color='var(--color-button-text)';
                 botao.style.transition=' background-color 0.8s';
@@ -60,6 +61,7 @@ function RegisterUserForm() {
         api.post('usuario', {
             name,
             surname,
+            avatar,
             email,
             password
 
@@ -100,6 +102,14 @@ function RegisterUserForm() {
                                 value={surname}
                                 placeholder="Sobrenome"
                                 onChange={ (e) => {setSurname(e.target.value)} }
+                                required
+                            />
+                            <Input 
+                                name="avatar" 
+                                label=""
+                                value={avatar}
+                                placeholder="Avatar"
+                                onChange={(e) => {setAvatar(e.target.value)} }
                                 required
                             />
                             <Input 

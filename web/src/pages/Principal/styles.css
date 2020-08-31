@@ -99,7 +99,7 @@ button {
 }
 
 .lado-b-options a:hover{
-    color: var(--color-primary);
+    color: var(--color-primary) !important;
 }
 
 .lado-b-options input[type='checkbox'] {
