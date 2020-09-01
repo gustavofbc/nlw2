@@ -21,6 +21,8 @@ routes.get('/connections', connectionsController.index);
 
 
 routes.post('/usuario', usuarioController.create);
+routes.post('/updatePerfilUsuario', usuarioController.update);
+routes.get('/getUsuarioById', usuarioController.getUsuarioById);
 routes.post('/signin', authController.signin);
 
 export default routes;

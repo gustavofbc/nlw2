@@ -1,4 +1,4 @@
-import React, {useState, FormEvent}  from 'react';
+import React, {useState, FormEvent, useEffect}  from 'react';
 import { useHistory } from 'react-router-dom';
 
 import PageHeader from '../../components/PageHeader';
@@ -18,28 +18,32 @@ function TeacherForm() {
 
     const [name, setName] = useState('');
     const [surname, setSurname] = useState('');
+    const [avatar, setAvatar] = useState('');
     const [email, setEmail] = useState('');
 
-    const [avatar, setAvatar] = useState('');
-
 // CRIAR FUNÇÃO PARA RECUPERAR OS DADOS DO USUÁRIO NOS CAMPOS DE INPUT E A IMAGEM ATUAL
+
+    const user_id = '1'
 
 // CRIAR FUNÇÃO DE ATUALIZAÇÃO DOS DADOS DO USUÁRIO
     function handleUpdateUsuario(e: FormEvent ) {
         e.preventDefault();
-        let token = getToken();
-        return alert(token);
-    //     api.post('classes', {
-    //         name,
-    //         surname,
-    //         email,
-    //     }).then( () => {
-            alert(console.log(token));
+        // let token = getToken();
+        // return alert(token);
+
+        api.post('updatePerfilUsuario', {
+            user_id,
+            name,
+            surname,
+            avatar,
+            email,
+        }).then( () => {
+            // alert(console.log(token));
             
-            // history.push('/user-updated-notification');
-    //     }).catch( () => {
-    //         alert('Erro no cadastro')
-            // })
+            history.push('/user-updated-notification');
+        }).catch( () => {
+            alert('Erro na atualização')
+            })
 
     }
 
@@ -48,6 +52,25 @@ function TeacherForm() {
     function updateImage() {
         return alert('imagem')
     }
+
+
+    useEffect( () => {
+        async function searchUsuario() {
+
+            const response = await api.get('getUsuarioById', {
+                params: {user_id}
+            });
+
+            setName(response.data[0].name);
+            setSurname(response.data[0].surname);
+            setAvatar(response.data[0].avatar);
+            setEmail(response.data[0].email);
+            
+        }
+    
+        searchUsuario();
+    
+    }, []);
 
     return (
         <div id="page-edit-perfil-form" className="container">
@@ -72,9 +95,10 @@ function TeacherForm() {
 
                     <Input 
                         name="name" 
-                        label="Nome completo"
+                        label="Nome"
                         value={name}
                         onChange={(e) => {setName(e.target.value)} }
+                        required
                     />
 
                     <Input 
@@ -82,6 +106,7 @@ function TeacherForm() {
                         label="Sobrenome"
                         value={surname}
                         onChange={(e) => {setSurname(e.target.value)} }
+                        required
                     />
 
                      <Input 
@@ -89,6 +114,7 @@ function TeacherForm() {
                         label="Avatar"
                         value={avatar}
                         onChange={(e) => {setAvatar(e.target.value)} }
+                        required
                     />
 
                     <Input 
@@ -96,6 +122,7 @@ function TeacherForm() {
                         label="E-mail"
                         value={email}
                         onChange={(e) => {setEmail(e.target.value)} }
+                        required
                     />
                 </fieldset>
 
