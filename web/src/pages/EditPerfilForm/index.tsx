@@ -60,12 +60,10 @@ function TeacherForm() {
             const response = await api.get('getUsuarioById', {
                 params: {user_id}
             });
-
             setName(response.data[0].name);
             setSurname(response.data[0].surname);
             setAvatar(response.data[0].avatar);
             setEmail(response.data[0].email);
-            
         }
     
         searchUsuario();
@@ -81,7 +79,7 @@ function TeacherForm() {
             <img className="background-image" src={backgroundImage} alt="background"/>
             </PageHeader>
                 <div className="image-perfil">
-                    <img src="https://avatars3.githubusercontent.com/u/40838230?s=460&u=c07951c74add98296f80181d8cacaa6c698154e3&v=4" alt=""/>
+                    <img src={avatar} alt=""/>
                     <div className="camera-icon">
                         <img onClick={updateImage} src={cameraIcon} alt=""/>
                     </div>

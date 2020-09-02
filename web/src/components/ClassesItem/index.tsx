@@ -3,7 +3,6 @@ import React from 'react'
 import bookEditIcon from '../../assets/images/icons/book-edit.svg';
 
 import './styles.css';
-import api from '../../services/api';
 import { Link } from 'react-router-dom';
 
 export interface Teacher {

@@ -33,6 +33,10 @@
     margin-right: 0.4rem;
 }
 
+#page-list-classes .button-edit:hover {
+    background-color: var(--color-secundary-dark);
+}
+
 @media(min-width: 700px){
     #page-list-classes {
         max-width: 100%;
