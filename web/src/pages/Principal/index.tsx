@@ -70,7 +70,7 @@ function Principal() {
 // PRECISO DE UM MÉTODO PRA RETORNAR ALGO QUE POSSA USAR PRA BUSCAR OS DADOS DO MEU USUÁRIO LOGADO E LEVAR
 // PRO CADASTRO DE CLASSES E DO PERFIL NA LANDING PAGE
                 // localStorage.setItem('User_id', result.data.usuarioExistente.id);
-                // console.log(result);
+                console.log(result.data.usuarioExistente);
                 login(result.data.token);
 
                 history.push("/home");

@@ -6,19 +6,18 @@ import Input from '../../components/Input';
 
 import warningIcon from '../../assets/images/icons/warning.svg';
 import backgroundImage from '../../assets/images/background-perfil.svg';
-import cameraIcon from '../../assets/images/icons/camera.svg';
+import cameraIcon from '../../assets/images/icons/camera-info.svg';
 
 import './styles.css';
 import api from '../../services/api';
-import { getToken } from '../../services/auth';
-
+import proffyIcon from '../../assets/images/icons/user-perfil.svg'
 
 function TeacherForm() {
     const history = useHistory();
 
     const [name, setName] = useState('');
     const [surname, setSurname] = useState('');
-    const [avatar, setAvatar] = useState('');
+    const [avatar, setAvatar] = useState(proffyIcon);
     const [email, setEmail] = useState('');
 
 // CRIAR FUNÇÃO PARA RECUPERAR OS DADOS DO USUÁRIO NOS CAMPOS DE INPUT E A IMAGEM ATUAL
@@ -49,8 +48,8 @@ function TeacherForm() {
 
 // CRIAR FUNÇÃO P/ ATUALIZAR IMAGEM, TORNAR O CAMPO UM INPUT E LIDAR COM ISSO NO BANCO
 
-    function updateImage() {
-        return alert('imagem')
+    function infoImage() {
+        return alert('Lembre-se: para alterar sua foto de perfil, deve informar a URL da imagem que deseja no campo "Avatar".')
     }
 
 
@@ -81,7 +80,7 @@ function TeacherForm() {
                 <div className="image-perfil">
                     <img src={avatar} alt=""/>
                     <div className="camera-icon">
-                        <img onClick={updateImage} src={cameraIcon} alt=""/>
+                        <img onClick={infoImage} src={cameraIcon} alt=""/>
                     </div>
                 </div>
                     <strong>Proffy teste</strong>

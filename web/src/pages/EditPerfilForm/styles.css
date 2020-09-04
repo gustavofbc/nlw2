@@ -34,6 +34,11 @@
     height: 4rem;
     margin-top: -150px;
     margin-left: -30px;
+    transition: 0.8s;
+}
+
+#page-edit-perfil-form .image-perfil .camera-icon img:hover {
+    height: 4.6rem;
 }
 
 #page-edit-perfil-form strong {
