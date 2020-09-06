@@ -33,7 +33,7 @@ const ClassesItem: React.FC<TeacherItemProps> = ({teacher}) => {
                     </div>
                 </div>
 
-                <Link to='/home' className='classes-button'>
+                <Link to='/edit-classes-form' className='classes-button'>
                     <img src={bookEditIcon} alt="BookEdit"/>
                 </Link>
             </header>

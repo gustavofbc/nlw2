@@ -8,6 +8,7 @@ import UserCreatedNotification from './pages/UserCreatedNotification';
 import UserUpdatedNotification from './pages/UserUpdatedNotification';
 import ResetSentNotification from './pages/ResetSentNotification';
 import ClassesCreatedNotification from './pages/ClassesCreatedNotification';
+import ClassesUpdatedNotification from './pages/ClassesUpdatedNotification';
 
 import PasswordRecovery from './pages/PasswordRecovery';
 import RegisterUserForm from './pages/RegisterUserForm';
@@ -16,6 +17,7 @@ import { isAuthenticated } from './services/auth';
 import ClassesList from './pages/ClassesList';
 import PerfilForm from './pages/PerfilForm';
 import EditPerfilForm from './pages/EditPerfilForm';
+import EditTeacherForm from './pages/EditTeatherForm';
 
 const PrivateRoute: React.FC<RouteProps> = ({ component: Component, ...rest}) => {
     if(!Component) return null;
@@ -40,11 +42,13 @@ function Routes() {
             <PrivateRoute path="/home" component={Landing} />
             <Route path="/study" component={TeacherList} />
             <Route path="/give-classes" component={TeacherForm} />
+            <Route path="/edit-classes-form" component={EditTeacherForm} />
 
             <Route path="/user-created-notification" component={UserCreatedNotification} />
             <Route path="/user-updated-notification" component={UserUpdatedNotification} />
             <Route path="/reset-sent-notification" component={ResetSentNotification} />
             <Route path="/classes-created-notification" component={ClassesCreatedNotification} />
+            <Route path="/classes-updated-notification" component={ClassesUpdatedNotification} />
             
             <Route path="/password-recovery" component={PasswordRecovery} />
             <Route path="/register-user" component={RegisterUserForm} />
